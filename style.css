@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    background-color: antiquewhite;
+
+}
+
+@font-face {
+    font-family: neww;
+    src: url('eph.ttf');
+}
+
+#home-header {
+    display: flex;
+    position: fixed;
+    top:0 ;
+    left:0;
+    width:100%;
+    z-index: 5;
+}
+
+#home-header div , #home-header a {
+    flex:1 ;
+    background-color: red;
+    border-right: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    line-height: 30px;
+
+}
+
+#home-header div{
+    background-color: rgb(219, 152, 152);
+    cursor:default ;
+    color:black ;
+}
+
+#home-header a {
+    text-decoration: none;
+}
+
+
+ #home-header a:hover {
+    color:red !important;
+    background-color: white !important;
+} 
+
+#new_company{
+    width:50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 15px;
+}
+
+
+
+
+@media (max-width: 500px) {
+    * {
+        font-size: 17px !important ;
+    }
+}
+
+
+#fl {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+   margin-top:32px;
+   border: 2px solid black ;
+   border-radius: 10px;
+}
+
+#fl div , #fl label , #fl input , #fl button {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#fl button {
+    border-color: red;
+    background-color: red;
+    color:aliceblue
+}
+
+
+
+#Overview {
+    height:100px ;
+    width:80% ;
+    border:1px solid black ;
+    border-radius: 10px;
+    margin: auto;
+    background:linear-gradient(90deg,gray,white);
+    font-weight: bold;
+    font-size:35px;
+    line-height: 80px;
+    text-align: center ;
+    overflow: auto;
+    animation-name: color ;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    font-family: neww;
+    word-spacing: 3px;
+}
+input{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#search {
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#search label ,#search button , #search input {
+    margin: auto;
+}
+
+.kkeys {
+    /* float: left; */
+    background-color: brown;
+    margin:10px auto ;
+    width: 20vw;
+    text-align: center;
+    color:white;
+    font-size: 25px;
+
+
+}
+
+table , th ,td {
+    border : 2px solid black ;
+    border-collapse: collapse;
+}
+th , td {
+    padding: 4px ;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#table-home {
+    margin:5px auto ;
+}
+
+.divider {
+    background: linear-gradient(90deg,lightblue ,gray);
+}
+
+
+
+#btn_keyword {
+    margin-bottom :4px ;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+
+
+
+
+@keyframes color {
+    0%{
+        background: linear-gradient(90deg,gray,rgb(222, 217, 112));
+        color:white ;
+    }
+    10%{
+        background: linear-gradient(90deg,rgb(144, 101, 101),rgb(129, 208, 113)) ;
+        color:black ;
+        opacity: 0.7;
+    }
+    20%{
+        background: linear-gradient(90deg,rgb(65, 81, 113),rgb(242, 188, 188));
+        color:black ;
+        opacity: 1;
+
+    }
+    35%{
+        background: linear-gradient(90deg,rgb(123, 82, 82),rgb(191, 204, 146));
+        color:white;
+
+    }
+    50%{
+        background: linear-gradient(90deg,rgb(70, 51, 105),rgb(215, 236, 114)); color:black ;
+        opacity: 0.7;
+
+    }
+    65%{
+        background: linear-gradient(90deg,rgb(222, 127, 127),rgb(160, 218, 141));
+        color: black;
+        opacity: 1;
+
+    }
+    75%{
+        background: linear-gradient(90deg,rgb(206, 231, 162),rgb(115, 180, 223));
+        color: white;
+
+    }
+    100%{
+        background: linear-gradient(90deg,rgb(131, 203, 190),rgb(215, 130, 130));
+        color:black;
+
+    }
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.delete:hover {
+    transform:scale(1.1) ;
+    box-shadow: 1px 1px 2px 2px red ;
+
+}
+
+
+
+

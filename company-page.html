@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Space</title>
+    <link rel="stylesheet" href="style.css" type="text/css"> 
+    <link rel="stylesheet" href="all.min.css">
+</head>
+
+    <style>
+        td.skills {
+            text-align: left;
+        }
+        .red {
+            color:red;
+            font-weight: bold;
+        }
+        #table_comp {
+            text-align: center;
+            margin: auto;
+        }
+
+    
+    </style>
+</head>
+<body>
+    
+    <header id="home-header">
+        <div>My-Job</div>
+        <a href="home.html">Home</a>
+        <a href="auth.html">For Companies</a>
+    </header>
+
+    <main>
+        <br><br><br>
+        <div id="Overview">
+            My-Job
+        </div>
+        <br><br>
+        <div style="margin: 10px auto; font-size: 24px; font-weight:bolder; text-align: center;">Your actual job opportunities:</div>
+        <!-- Job Information Table -->
+        <table border="1" id="table_comp">
+            <thead>
+                <tr>
+                    <th class="divider">Job</th>
+                    <th class="divider">Skills</th>
+                    <th class="divider">Location</th>
+                    <th class="divider">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="jobList">
+                <!-- Job information will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+    </main>
+
+    <div id="add_btn" style="margin: 10px auto; width: 50%; text-align: center; font-weight: bold; font-size: 24px;">
+        <img src="plus.png" alt="An Icon" style="display: block; margin: 0 auto; cursor: pointer;" id="btn_img">Add more jobs
+    </div>
+
+
+
+<script src="company.js"> </script>
+
+<script>
+    
+let skills_jobs = document.getElementsByClassName("skills");
+for (let skills_job of skills_jobs) {
+    let content = skills_job.textContent;
+    content = JSON.parse(content);
+    let neww = "";
+    
+    for (let key in content) {
+        neww += `<span class="red">Skill:</span><span> ${key} , <span class="red">Years Of Experience:</span><span> ${content[key]}</span> <br>`;
+    }
+    
+    skills_job.innerHTML = neww;
+}
+</script>
+
+
+
+
+
+</body>
+</html>
